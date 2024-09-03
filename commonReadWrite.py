@@ -1,5 +1,4 @@
 import snowflake_readWrite
-import os
 import snowflake.connector as sf
 from snowflake.sqlalchemy import URL
 from sqlalchemy import create_engine 
@@ -45,7 +44,7 @@ def write_data():
     if objconfig['target'].get('database') == 'local':
         tbl_name = objconfig['target'].get('tableName')
         df = read_data
-        df.to_csv(f"{cwd}\{tbl_name}_{datetime.now()}", index=False)
+        df.to_csv(f"{cwd}\{tbl_name}_{datetime.now()}", index=True)
 
     
 
