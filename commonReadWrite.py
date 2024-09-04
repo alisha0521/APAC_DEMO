@@ -2,7 +2,7 @@ import snowflake_readWrite
 import snowflake.connector as sf
 from snowflake.sqlalchemy import URL
 from sqlalchemy import create_engine 
-import pandas as pd
+#import pandas as pd
 import yaml
 from snowflake_readWrite import read_data_Mysql,snowflake_read,write_data_Mysql,snowflake_write
 from datetime import datetime
@@ -44,7 +44,7 @@ def write_data():
     if objconfig['target'].get('database') == 'local':
         tbl_name = objconfig['target'].get('tableName')
         df = read_data
-        df.to_csv(f"{cwd}\{tbl_name}_{datetime.now()}", index=True)
+        df.to_csv(f"{cwd}\{tbl_name}_{datetime.now()}", index=False)
 
     
 
