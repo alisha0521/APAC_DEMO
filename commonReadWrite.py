@@ -3,7 +3,7 @@ import snowflake.connector as sf
 from snowflake.sqlalchemy import URL
 from sqlalchemy import create_engine 
 #import pandas as pd
-import yaml
+import os
 from snowflake_readWrite import read_data_Mysql,snowflake_read,write_data_Mysql,snowflake_write
 from datetime import datetime
 
